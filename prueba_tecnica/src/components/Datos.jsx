@@ -25,10 +25,9 @@ function Datos() {
         style={{ width: "30rem", margin: "20px" }}
       >
         <div className="card-header">informacion</div>
-        <div className="card-body">
-          <CardBody arreglo={arreglo} />
-        </div>
-        <div className="card-footer text-body-secondary">2 days ago</div>
+        {arreglo.map((item) => (
+          <CardBody key={item.id} arreglo={[item]} />
+        ))}
       </div>
     </>
   );
