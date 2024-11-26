@@ -14,7 +14,6 @@ async def get_product(id: str):
     else: 
          return product_entity(prod)
 
-
 async def create_product(product: Product):
      new_product = dict(product)
      del new_product["id"]
